@@ -15,36 +15,56 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
-}
-// Remember to call the function to test
+  let result = 'Hello, ' + name + '!';
+  return result;
+}//end helloName
 
+// Remember to call the function to test
+console.log('Test - should say Hello a name', helloName('Asiya'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
-}
+  let result = firstNumber + secondNumber;
+  return result;
+}//end addNumbers 
+
+//call the function to test
+console.log('The answer to 6 + 5 is: ', addNumbers(6,5));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
+function multiplyThree(num0,num1,num2) {
+  //return number0 * number1 * number1
+  let result = num0 * num1 * num2;
+  return result;
+}//end multiplyThree
 
-}
-
+//call the function to test
+console.log('The answer to 5 * 8 * 20 is:', multiplyThree(5,8,20));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
-}
+    return true;
+  }//end it is positive
+  else{
+    return false;
+  }// end not positive  
+}// end isPositive 
+
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
 console.log('isPositive - should say false', isPositive(-3));
+
+//call the function to test
+console.log('is 789 a postive number: ', isPositive(789));
+console.log('is -89076 a postive number: ', isPositive(-89076));
+console.log('is 0 a postive number:', isPositive(0));
 
 
 // 6. Function to return the _last_ item in an array. If the 
