@@ -70,24 +70,25 @@ console.log('is 0 a postive number:', isPositive(0));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
-//HELP HELPPPPP!!!!!
-function getLast(array) {
-  for(let i=0; i < array.length; i++){
-    if(i = array.length-1){
-      console.log(array[i]);
-    }
+function getLast(array){
+  //if the array is empty return undefined 
+  if(array.length == 0){
+    return undefined
   }
-  return 'undefined';
+  //else return the last item in the array
+  else{
+    return array[array.length-1];
+  }
 }
 
-//call the function to test
-console.log('The last item in the array is:', getLast[8,9,'bob',0,-1]);
+//call the getLast function to test
+let numArray = [3,4,5,6,-8,9];
+console.log('The last item in the array is:', getLast(numArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-  let i=0;
   for(let i = 0; i < array.length; i++){
     if(array[i] == value){
       return  true;
@@ -97,7 +98,7 @@ function find(value, array) {
 }//end find
 
 //call the function to test
-console.log('Find -8 in the array:', find(-8,[0,-8,9,678,99,0,99,8]));
+console.log('Find -1 in the array:', find(-1,[0,-8,9,678,99,0,-1,99,8]));
 
 // ----------------------
 // Stretch Goals
